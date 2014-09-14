@@ -13,4 +13,4 @@ See 'master' branch in GitHub.
 
 
 # References
-TODO: Put API reference(s) here
+API located here: http://rate-exchange.appspot.com/
