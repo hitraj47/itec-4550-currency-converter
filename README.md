@@ -1,5 +1,7 @@
 # Description
-This app uses an API to convert currencies.
+This app lets you convert between 5 currencies. You can convert from/to USD (US Dollar), GBP (Great Britain Pounds), CAD (Canadian Dollar), EUR (Euros) and JPY (Japanese Yen).
+
+The app pulls the latest rates so you need an Internet connection.
 
 # Demonstration
 Soon...
