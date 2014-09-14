@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <string name="app_name">ITEC 4550 Currency Converter</string>
     <string name="hello_world">Hello world!</string>
     <string name="str_from">From:</string>
     <string name="str_to">To:</string>
     <string name="str_convert">Convert</string>
+    <string-array name="arr_str_currencies_abbr">
+        <item android:id="@+id/str_usd" android:layout_height="wrap_content" android:layout_width="wrap_content">USD</item>
+        <item android:id="@+id/str_gbp" android:layout_height="wrap_content" android:layout_width="wrap_content">GBP</item>
+        <item android:id="@+id/str_cad" android:layout_height="wrap_content" android:layout_width="wrap_content">CAD</item>
+        <item android:id="@+id/str_eur" android:layout_height="wrap_content" android:layout_width="wrap_content">EUR</item>
+        <item android:id="@+id/str_jpy" android:layout_height="wrap_content" android:layout_width="wrap_content">JPY</item>
+    </string-array>
 
 </resources>
