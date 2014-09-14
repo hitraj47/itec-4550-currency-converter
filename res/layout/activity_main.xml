@@ -33,7 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/lblFrom"
         android:layout_below="@+id/lblFrom"
-        android:layout_marginTop="23dp" />
+        android:layout_marginTop="23dp"
+        android:entries="@array/arr_str_currencies_abbr" />
 
     <TextView
         android:id="@+id/lblTo"
@@ -47,8 +48,9 @@
         android:id="@+id/spnTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblTo"
         android:layout_alignTop="@+id/spnFrom"
-        android:layout_toRightOf="@+id/lblTo" />
+        android:entries="@array/arr_str_currencies_abbr" />
 
     <Button
         android:id="@+id/btnConvert"
@@ -56,6 +58,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/spnTo"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
         android:text="@string/str_convert" />
+
+    <TextView
+        android:id="@+id/lblResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnConvert"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
 
 </RelativeLayout>
