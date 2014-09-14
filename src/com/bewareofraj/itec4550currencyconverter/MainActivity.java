@@ -1,5 +1,10 @@
 package com.bewareofraj.itec4550currencyconverter;
 
+import java.text.DecimalFormat;
+import java.util.concurrent.ExecutionException;
+
+import com.bewareofraj.itec4550currencyconverter.util.RetrieveRateTask;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,7 +44,12 @@ public class MainActivity extends Activity {
 					Toast toast = Toast.makeText(MainActivity.this, "Enter an amount to convert!", Toast.LENGTH_LONG);
 					toast.show();
 				} else {
-					calculateResult();
+					try {
+						calculateResult();
+					} catch (InterruptedException | ExecutionException e) {
+						Toast toast = Toast.makeText(MainActivity.this, "An error occurred while trying to get rates...", Toast.LENGTH_LONG);
+						toast.show();
+					}
 				}
 			}
 		});
@@ -47,7 +57,14 @@ public class MainActivity extends Activity {
 		lblResult = (TextView) findViewById(R.id.lblResult);		
 	}
 	
-	private void calculateResult() {
-		
+	private void calculateResult() throws InterruptedException, ExecutionException {
+		String[] fromToArray = new String[2];
+		fromToArray[0] = spnFrom.getSelectedItem().toString();
+		fromToArray[1] = spnTo.getSelectedItem().toString();
+		Float rate = new RetrieveRateTask().execute(fromToArray).get();
+		Float amount = Float.parseFloat(txtAmount.getText().toString());
+		Float result = amount * rate;
+		DecimalFormat money = new DecimalFormat("#.00");
+		lblResult.setText(money.format(result));
 	}
 }
