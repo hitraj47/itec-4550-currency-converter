@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
 		Float rate = new RetrieveRateTask().execute(fromToArray).get();
 		Float amount = Float.parseFloat(txtAmount.getText().toString());
 		Float result = amount * rate;
-		DecimalFormat money = new DecimalFormat("#.00");
+		DecimalFormat money = new DecimalFormat("0.00");
 		lblResult.setText(money.format(result));
 	}
 }
