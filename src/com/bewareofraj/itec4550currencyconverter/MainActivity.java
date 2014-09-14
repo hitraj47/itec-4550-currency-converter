@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
@@ -34,7 +35,12 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				calculateResult();
+				if (txtAmount.getText().toString().equals("")) {
+					Toast toast = Toast.makeText(MainActivity.this, "Enter an amount to convert!", Toast.LENGTH_LONG);
+					toast.show();
+				} else {
+					calculateResult();
+				}
 			}
 		});
 		
