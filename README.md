@@ -4,7 +4,7 @@ This app lets you convert between 5 currencies. You can convert from/to USD (US 
 The app pulls the latest rates so you need an Internet connection.
 
 # Demonstration
-Soon...
+YouTube Video: https://www.youtube.com/watch?v=iopbzGlTqmc&feature=youtube_gdata
 
 # Source Code
 See 'master' branch in GitHub.
